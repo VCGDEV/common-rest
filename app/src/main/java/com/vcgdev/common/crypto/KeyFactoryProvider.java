@@ -1,12 +1,9 @@
 package com.vcgdev.common.crypto;
 
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
 import java.security.spec.KeySpec;
 import java.util.Base64;
 
-import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
