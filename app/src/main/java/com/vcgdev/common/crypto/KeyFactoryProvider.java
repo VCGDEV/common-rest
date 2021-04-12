@@ -9,10 +9,12 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import lombok.extern.slf4j.Slf4j;
 
 import com.vcgdev.common.exception.ErrorCode;
 import com.vcgdev.common.exception.ServiceException;
 
+@Slf4j
 public abstract class KeyFactoryProvider {
 
     protected String password;
@@ -24,6 +26,7 @@ public abstract class KeyFactoryProvider {
             KeySpec spec = new PBEKeySpec(password.toCharArray(), salt.getBytes(), 65536, 256);
             return new SecretKeySpec(factory.generateSecret(spec).getEncoded(), "AES");
         } catch (Exception e) {
+            log.error("Unable to create secret", e);
             throw new ServiceException(ErrorCode.INTERNAL);
         }
     }
