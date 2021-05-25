@@ -8,11 +8,13 @@ public class SwaggerConstants {
     public static final String INTERNAL_SERVER_ERROR_MESSAGE = "Internal Server Error";
     public static final String FORBIDDEN_MESSAGE = "Access denied";
     public static final String UNAUTHORIZED_MESSAGE = "Not authorized";
+    public static final String NOT_FOUND_MESSAGE = "Not Found";
 
     public static final String HTTP_GET = "GET";
     public static final String HTTP_POST = "POST";
     public static final String HTTP_PUT = "PUT";
     public static final String HTTP_DELETE = "DELETE";
-    
+    public static final String HTTP_PATCH = "PATCH";
+
     private SwaggerConstants()  {}
 }
