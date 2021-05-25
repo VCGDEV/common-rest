@@ -30,7 +30,7 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 apply plugin: "com.jfrog.artifactory"
 group 'com.vcgdev.common'
-version '1.0-SNAPSHOT'
+version '2.0.0'
 sourceCompatibility = 1.8
 
 task sourcesJar(type: Jar) {
