@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         maven {
-            url 'https://vsatdev.jfrog.io/artifactory/plugins-release'
+            url 'http://69.64.34.188:8081/artifactory/release-local'
             credentials {
                 username System.getenv("artifactory_user")
                 password System.getenv("artifactory_password")
@@ -68,10 +68,10 @@ publishing {
     
 }
 artifactory {
-    contextUrl = "https://vsatdev.jfrog.io/artifactory"
+    contextUrl = "http://69.64.34.188:8081/artifactory"
     publish {
         repository {            
-            repoKey = 'gradle-dev-local'
+            repoKey = 'release-local'
             username = System.getenv("artifactory_user")
             password = System.getenv("artifactory_password")
             maven = true
